@@ -32,9 +32,7 @@ class Song
 
   def genre=(genre)
     @genre = genre
-    if not self.genre.songs.include?(self)
-      self.genre.songs << self
-    end
+    genre.songs << self unless genre.songs.include?(self)
   end
 
   def self.new_from_filename(filename)
