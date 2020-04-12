@@ -42,7 +42,7 @@ class Song
     artist_name = array[0]
     genre_name = array[2].split(".mp3").join
 
-    
+
     # artist_name, song_name, genre, mp3 = filename.split(/[-.]/)
     # artist_name.strip!
     # song_name.strip!
