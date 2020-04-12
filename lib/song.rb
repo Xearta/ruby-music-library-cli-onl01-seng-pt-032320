@@ -46,7 +46,7 @@ class Song
     song_name.strip!
     genre.strip!
     song = find_or_create_by_name(song_name)
-    binding.pry
+    #binding.pry
   end
 
   def self.create_from_filename(filename)
