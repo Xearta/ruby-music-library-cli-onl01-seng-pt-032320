@@ -36,12 +36,19 @@ class Song
   end
 
   def self.new_from_filename(filename)
-    artist_name, song_name, genre, mp3 = filename.split(/[-.]/)
-    artist_name.strip!
-    song_name.strip!
-    genre.strip!
-    song = self.new(song_name, artist_name, genre)
-    binding.pry
+    array = filename.split(" - ")
+
+    song_name = array[1]
+    artist_name = array[0]
+    genre_name = array[2].split(".mp3").join
+
+    
+    # artist_name, song_name, genre, mp3 = filename.split(/[-.]/)
+    # artist_name.strip!
+    # song_name.strip!
+    # genre.strip!
+    # song = self.new(song_name, artist_name, genre)
+    # binding.pry
     #song = find_or_create_by_name(song_name)
     #song.artist=(artist_name)
     #binding.pry
