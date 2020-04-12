@@ -44,7 +44,7 @@ class Song
     #filename = filename.split('.mp3')
     artist_name, song_name, genre, mp3 = filename.split(/[-.]/)
     #binding.pry
-    song = self.create(song_name)
+    song = self.create(song_name.strip)
     # song.artist=(artist_name)
     # song.genre=(genre)
     #song
