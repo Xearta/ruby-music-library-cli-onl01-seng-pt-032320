@@ -45,8 +45,9 @@ class Song
     artist_name.strip!
     song_name.strip!
     genre.strip!
-    song = find_or_create_by_name(song_name)
-    song.artist=(artist_name)
+    song = self.new(song_name, artist_name, genre)
+    #song = find_or_create_by_name(song_name)
+    #song.artist=(artist_name)
     #binding.pry
   end
 
