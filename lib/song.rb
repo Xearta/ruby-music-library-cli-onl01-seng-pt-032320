@@ -41,11 +41,9 @@ class Song
 
   def self.new_from_filename(filename)
     artist_name, song_name, genre, mp3 = filename.split(/[-.]/)
-    #binding.pry
-    song = self.create(song_name.strip)
+    song = self.new(song_name.strip)
     song.artist=(artist_name.strip)
     song.genre=(genre.strip)
-    #song
   end
 
   def self.create_from_filename(filename)
