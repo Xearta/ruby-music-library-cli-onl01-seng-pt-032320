@@ -45,7 +45,7 @@ class Song
     artist_name.strip!
     song_name.strip!
     genre.strip!
-    find_or_create_by_name(song_name)
+    song = find_or_create_by_name(song_name)
   end
 
   def self.create_from_filename(filename)
